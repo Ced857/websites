@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #110f0f 70%, #141414 30%);
+  }
+  
+  .header {
+    width: 100%;
+    height: 60px;
+    min-height: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+  
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    position: relative;
+    top: 0px;
+    right: 4%;
+    cursor: pointer;
+    margin: 30px 0;
+  }
+  
+  nav {
+    flex: 1;
+    text-align: right;
+  }
+  
+  nav ul li {
+    position: relative;
+    left: 20%;
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.5s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+  }
+  
+  .socialmedia {
+    position: relative;
+    top: 0px;
+    right: 55%;
+  }
+  
+  .socialmedia ul li {
+    position: relative;
+    left: 70%;
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+  }
+  
+  .socialmedia ul li a {
+    color: #ffffff;
+    transition: all 0.5s;
+  }
+  
+  .socialmedia ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  
+  .col-1 {
+    overflow: hidden;
+    position: relative;
+    bottom: 50px;
+    padding: 20px;
+    margin-left: 50px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+    height: 300px;
+  }
+  
+  
+  .col-1.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .col-1 h2 {
+    color: #e2d6d6;
+    font-size: 54px;
+  }
+  
+  .col-1 h3 {
+    color: #e2d6d6;
+    font-size: 54px;
+    font-weight: 100;
+    margin: 0px 0 15px;
+  }
+  
+  .col-1 p {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  
+  .button {
+    width: 140px;
+    height: 30px;
+    border: 0;
+    outline: none;
+    color: #000000;
+    background: none;
+    background: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.5s;
+  }
+  
+  .button:hover {
+    transform: translateX(10px);
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .col-2 {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    align-items: right;
+  }
+  
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .ano-float {
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+    
+@keyframes slide-in-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    
+    .col-1 h2,
+    .col-1 h3 {
+        animation: slide-in-left 0.5s ease-in forwards; 
+}
+
+  
+  
+  .ano-slide {
+    position: relative;
+    right: -100%;
+    animation: slide-in-right 0.5s ease-in forwards;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    body {
+        background: linear-gradient(to bottom, #110f0f 50%, #141414 50%);
+    }
+
+    .header {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 20px 0;
+        right: 0;
+    }
+
+    nav {
+        text-align: center;
+        margin-top: 20px; /* Add margin to center the nav links */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Add margin to center the social media icons */
+    }
+
+    .socialmedia ul li {
+        margin: 0 10px;
+    }
+
+    .row {
+        flex-direction: column;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .col-1 {
+        margin: 0;
+        padding: 20px;
+    }
+}
+  
+  

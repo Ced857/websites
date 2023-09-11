@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul>
+                   <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        
+
+            <div class="socialmedia">
+                <ul>
+                    <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-instagram-alt' ></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <div class="row">
+        <div class="col-1 slide-in">
+            <h2>Hello I'm Ced</h2>
+            <h3>Im a newbie in Programming Industry</h3>
+            <p id="typed-text"></p>
+            <button class="button">
+                View Project<i class='bx bx-right-arrow-alt'></i>
+            </button>
+        </div>
+        <div class="col-2">
+            <img src="ano.png" class="ano-float slide-in">
+        </div>
+    </div>
+    <script>
+        
+        const textToType = "In this portfolio, you'll find a collection of my early works, where I've been honing my skills and exploring the boundless possibilities of web design and photo editing. While I may be a newbie, my dedication and commitment to mastering these crafts are unwavering";
+
+        
+        const typedTextElement = document.getElementById('typed-text');
+
+        
+            let i = 0;
+            const speed = 50; 
+
+            function type() {
+                if (i < textToType.length) {
+                    typedTextElement.innerHTML += textToType.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        
+
+        
+        window.addEventListener('load', typeText);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
